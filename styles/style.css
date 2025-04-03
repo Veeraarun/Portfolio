@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root{
+  /* Background Variables */
+  --secondary-background: #414141;
+
+  /* Color Variables */
+  --primary-color: white;
+  --secondary-color: #ABB2BF;
+  --gradient-color: linear-gradient(to bottom, #17AA00, #0b5300);
+  
+  /* Font Variables */
+  --font-family: "Fira Code", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* 16px default */
+  scroll-behavior: smooth;
+  background-color: #0f0f0f;
+}
+
+body {
+  font-family: var(--font-family);
+  color: #ffffff;
+  background-color: #0f0f0f;
+  max-width: 80%;
+  align-items: center;
+  margin: auto;
+}
+
+
+/* Header Styles */
+
+header {
+  background-color: var(--secondary-background);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+header .nav-list li {
+  display: inline-block;
+}
+header a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.nav-hash{
+  background: var(--gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Home Styles */
+
+.home-section{
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+
+}
+
+.home-content{
+  grid-column: span 2 / span 2;
+
+  h1{
+    font-size: 2rem;
+    margin: 10rem 0 5rem 0;
+  }
+
+  p{
+    font-size: 1.5rem;
+  }
+
+  button{
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    border: solid 2px #17AA00;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all .5s;
+  }
+  button:hover{
+    border: solid 2px #ffffff;
+    background-color: #0b5300;
+  }
+}
+
+.home-content span{
+  background: var(--gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-image {
+  grid-column-start: 3;
+
+  img{
+   width: 100%;
+  }
+}
+
+.quotes-container{
+  width: 80%;
+  margin: auto;
+  margin-top: 10rem;
+}
+.quotes {
+  background-color: var(--secondary-background);
+  border: solid 2px white;
+  padding: .5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.author{
+  font-size: 1rem;
+  float: right;
+  text-align: right;
+  border: 2px solid #414141;
+  padding: 1rem;
+}
+
+/* Projects Styles */
+
+.projects-section{
+  margin-top: 20rem;
+}
+.projects-title{
+
+  p{
+    font-size: 3rem;
+
+    span{
+      color: #0b5300;
+    }
+  }
+  a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.projects-container{
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 8px;
+}
+.project-box{
+  border: 1px solid white;
+  width: 100%;
+}
+.project-thumb img{
+  width: 100%;
+}
+.project-title{
+  margin: 1rem 0;
+}
+.project-description button{
+  margin: 1rem;
+  padding: .2rem 1rem;
+  border: solid 2px #17AA00;
+  background-color: transparent;
+  color: white;
+}
