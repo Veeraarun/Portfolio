@@ -88,7 +88,7 @@ header a{
   }
 
   p{
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   button{
@@ -129,10 +129,10 @@ header a{
 }
 .quotes {
   background-color: var(--secondary-background);
-  border: solid 2px white;
-  padding: .5rem;
+  border: solid 2px rgb(177, 177, 177);
+  padding: 1rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .author{
   font-size: 1rem;
@@ -145,12 +145,12 @@ header a{
 /* Projects Styles */
 
 .projects-section{
-  margin-top: 20rem;
+  margin-top: 10rem;
 }
 .projects-title{
 
   p{
-    font-size: 3rem;
+    font-size: 2rem;
 
     span{
       color: #0b5300;
@@ -168,7 +168,7 @@ header a{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  gap: 8px;
+  gap: 50px;
 }
 .project-box{
   border: 1px solid white;
@@ -180,10 +180,79 @@ header a{
 .project-title{
   margin: 1rem 0;
 }
+.project-description{
+  h3{
+    font-size: 1.2rem;
+  }
+
+}
 .project-description button{
-  margin: 1rem;
+  margin: 1rem 0;
   padding: .2rem 1rem;
   border: solid 2px #17AA00;
   background-color: transparent;
   color: white;
+}
+
+
+/* Skills Styles */
+
+.skills-section{
+  margin-top: 5rem;
+}
+.skills-title{
+  font-size: 2rem;
+  span{
+    color: #0b5300;
+  }
+}
+.skills-container{
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+.skills-content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 15px;
+
+  .databases{
+    grid-column-start: 2;
+  }
+  .frameworks{
+    grid-column-start: 3;
+  }
+}
+.skills-content > * {
+  border: 1px solid #ffffff;
+  padding: 15px 5px;
+
+  span{
+    font-weight: bold;
+  }
+  hr{
+    margin: 1rem 0;
+  }
+}
+
+/* About-Me Styles */
+
+.about-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.about-title{
+  font-size: 2rem;
+
+  span{
+    color: #0b5300;
+  }
+}
+
+.about-image img{
+  width: 100%;
 }
