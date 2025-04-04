@@ -39,11 +39,15 @@ body {
 /* Header Styles */
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: var(--secondary-background);
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 0px 0px 5px 5px ;
 }
 
 header .nav-list {
@@ -54,7 +58,15 @@ header .nav-list {
 
 header .nav-list li {
   display: inline-block;
+  background-color: transparent;
 }
+header .nav-list li:hover{
+  background: var(--gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 header a{
   font-size: 1.5rem;
   text-decoration: none;
@@ -67,6 +79,7 @@ header a{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 
 /* Home Styles */
