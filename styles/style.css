@@ -253,6 +253,76 @@ header a{
   }
 }
 
+.about-content{
+  margin-top: 7rem;
+  font-size: 1.1rem;
+  line-height: 30px;
+
+  span{
+    font-weight: bolder;
+  }
+
+  button{
+    background-color: transparent;
+    color: white;
+    padding: .5rem;
+    border: 1px solid #17AA00;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  button:hover{
+    background-color: #0b5300;
+  }
+}
+
 .about-image img{
   width: 100%;
+}
+
+/* Contact Styles */
+
+.contact-section{
+  margin-top: 10rem;
+}
+.contact-title{
+  font-size: 2rem;
+  span{
+    color: #0b5300;
+  }
+}
+.contact-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  margin-top: 2rem;
+}
+.contact-info{
+  text-align: center;
+  border: 1px solid #414141;
+  margin: 0 10rem;
+  a{
+    text-decoration: none;
+    color: #0b5300;
+  }
+}
+
+/* Footer Styles */
+
+.footer-section{
+  margin-top: 5rem;
+}
+.footer-description{
+  margin-top: 1rem;
+}
+.footer-links{
+  text-align: center;
+  margin: 1rem 0;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+}
+.footer-copy{
+  text-align: center;
 }
