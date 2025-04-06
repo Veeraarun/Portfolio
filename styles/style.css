@@ -23,66 +23,49 @@
 html {
   font-size: 100%; /* 16px default */
   scroll-behavior: smooth;
-  background-color: #0f0f0f;
+  background-color: #000000;
 }
 
 body {
   font-family: var(--font-family);
   color: #ffffff;
-  background-color: #0f0f0f;
   max-width: 80%;
   align-items: center;
   margin: auto;
 }
 
-
-/* Header Styles */
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--secondary-background);
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 0px 0px 5px 5px ;
+hr{
+  color: #414141;
 }
 
-header .nav-list {
+.text-color-gradient{
+  background: var(--gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Home Styles */
+
+.nav-list {
   list-style: none;
   display: flex;
   gap: 50px;
 }
 
-header .nav-list li {
-  display: inline-block;
-  background-color: transparent;
-}
-header .nav-list li:hover{
+.nav-list li:hover{
   background: var(--gradient-color);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-header a{
-  font-size: 1.5rem;
+
+.nav-list a{
+  font-size: 1.2rem;
   text-decoration: none;
   color: var(--primary-color);
 }
-
-.nav-hash{
-  background: var(--gradient-color);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-
-/* Home Styles */
 
 .home-section{
   margin-top: 5rem;
@@ -120,18 +103,17 @@ header a{
   }
 }
 
-.home-content span{
-  background: var(--gradient-color);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .home-image {
   grid-column-start: 3;
-
+  position: relative;
   img{
-   width: 100%;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
   }
 }
 
@@ -142,17 +124,17 @@ header a{
 }
 .quotes {
   background-color: var(--secondary-background);
-  border: solid 2px rgb(177, 177, 177);
-  padding: 1rem;
+  border: solid 1px rgb(177, 177, 177);
+  padding: .5rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .author{
   font-size: 1rem;
   float: right;
   text-align: right;
-  border: 2px solid #414141;
-  padding: 1rem;
+  border: 1px solid #414141;
+  padding: .5rem;
 }
 
 /* Projects Styles */
@@ -165,9 +147,7 @@ header a{
   p{
     font-size: 2rem;
 
-    span{
-      color: #0b5300;
-    }
+    
   }
   a{
     font-size: 1.5rem;
@@ -181,37 +161,39 @@ header a{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  gap: 50px;
 }
 .project-box{
-  border: 1px solid white;
-  width: 100%;
+  border: 1px solid #414141;
+  width: 75%;
+  padding: 1rem;
+}
+.project-thumb {
+  text-align: center;
 }
 .project-thumb img{
-  width: 100%;
+  width: 90%;
+  border-radius: 5px;
 }
 .project-title{
   margin: 1rem 0;
 }
-.project-description{
-  h3{
-    font-size: 1.2rem;
-  }
-
-}
 .project-description button{
   margin: 1rem 0;
   padding: .2rem 1rem;
-  border: solid 2px #17AA00;
+  border: solid 2px #0b5300;
   background-color: transparent;
   color: white;
+  transition: all .3s;
+}
+.project-description button:hover{
+  background-color: #0b5300;
 }
 
 
 /* Skills Styles */
 
 .skills-section{
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 .skills-title{
   font-size: 2rem;
@@ -228,7 +210,7 @@ header a{
 .skills-content{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 15px;
 
   .databases{
@@ -239,7 +221,7 @@ header a{
   }
 }
 .skills-content > * {
-  border: 1px solid #ffffff;
+  border: 1px solid #414141;
   padding: 15px 5px;
 
   span{
@@ -259,6 +241,7 @@ header a{
 }
 
 .about-title{
+  margin-top: 13rem;
   font-size: 2rem;
 
   span{
@@ -267,19 +250,21 @@ header a{
 }
 
 .about-content{
-  margin-top: 7rem;
+  margin-top: 5rem;
   font-size: 1.1rem;
   line-height: 30px;
+  color: #cdcdcd;
 
   span{
+    color: #17AA00;
     font-weight: bolder;
   }
 
   button{
     background-color: transparent;
-    color: white;
+    color: #cdcdcd;
     padding: .5rem;
-    border: 1px solid #17AA00;
+    border: 1px solid #0b5300;
     margin-top: 1rem;
     cursor: pointer;
     transition: all .3s;
@@ -288,15 +273,21 @@ header a{
     background-color: #0b5300;
   }
 }
-
+.about-image{
+  position: relative;
+}
 .about-image img{
   width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Contact Styles */
 
 .contact-section{
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 .contact-title{
   font-size: 2rem;
@@ -308,12 +299,13 @@ header a{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 .contact-info{
   text-align: center;
   border: 1px solid #414141;
   margin: 0 10rem;
+  padding: .5rem;
   a{
     text-decoration: none;
     color: #0b5300;
@@ -323,19 +315,21 @@ header a{
 /* Footer Styles */
 
 .footer-section{
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 .footer-description{
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 .footer-links{
   text-align: center;
-  margin: 1rem 0;
+  margin: 2rem 0;
   a{
     text-decoration: none;
     color: white;
   }
 }
 .footer-copy{
+
   text-align: center;
+  color: #ABB2BF;
 }
