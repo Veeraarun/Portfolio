@@ -355,32 +355,211 @@ hr{
   }
 }
 
-/* Responsivness */
+/* Responsiveness */
 
-@media (max-width: 768px){
-  html{
-    ;
-  }
-
-  body{
+@media (max-width: 768px) {
+  body {
     max-width: 90%;
   }
 
-}
+  .home-section {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
 
-@media (max-width: 500px){
-  html{
+  .home-content {
+    grid-column: span 1;
     
   }
-  .home-image{
-    img{
-      width: 180%;
+
+  .home-content h1 {
+    font-size: 1.5rem;
+    margin: 2rem 0 2rem 0;
+  }
+
+  .home-image {
+    grid-column-start: 1;
+    margin: 5rem 0 6rem 0;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+  }
+
+  .quotes-container {
+    width: 80%;
+
+    .quotes{
+      font-size: .8rem;
     }
+    .author{
+      font-size: .6rem;
+    }
+    
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-box {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skills-content {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: auto;
+    gap: 2rem;
+    margin-bottom: -23rem;
+  }
+
+  .skills-content .databases,
+  .skills-content .others {
+    grid-column-start: auto;
+  }
+  
+  .skill-graphics{
+    visibility: hidden;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    
+  }
+
+  .about-image {
+    margin-top: 10rem;
+    width: 400px;
+    margin-left: auto;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    .contact-info{
+      margin-top: 2rem;
+    }
+  }
+
+  .disclaimer {
+    font-size: 12px;
+    padding: 10px;
   }
 }
 
-@media (max-width: 410px){
-  html{
-   
+@media (max-width: 500px) {
+  body {
+    max-width: 95%;
+  }
+
+  .home-content h1 {
+    font-size: 1.5rem;
+    margin: 3rem 0 1.5rem 0;
+  }
+
+  .home-content p {
+    font-size: 0.9rem;
+  }
+
+  .home-content button {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .home-image {
+    grid-column-start: 1;
+    margin: 5rem 0 2rem 0;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-list {
+    gap: 20px;
+    font-size: 0.9rem;
+  }
+
+  .nav-list a {
+    font-size: 1rem;
+  }
+
+  .quotes {
+    font-size: 1.1rem;
+  }
+
+  .projects-title p {
+    font-size: 1.5rem;
+  }
+
+  .skills-title {
+    font-size: 1.5rem;
+  }
+
+  .skills-container{
+    font-size: 1rem;
+    width: 80%;
+    margin: auto;
+    gap: 1rem;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+    margin-top: 9rem;
+  }
+
+  .about-content {
+    margin-top: 2rem;
+    font-size: 1rem;
+    line-height: 25px;
+  }
+  .contact-section{
+    margin-top: 20rem;
+  }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
+  .disclaimer {
+    font-size: 11px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 410px) {
+  body {
+    max-width: 98%;
+  }
+
+  .home-content h1 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .home-content p {
+    font-size: 0.85rem;
+  }
+
+  .home-content button {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .skills-title,
+  .about-title,
+  .contact-title,
+  .projects-title p {
+    font-size: 1.2rem;
+  }
+
+  .quotes {
+    font-size: 1rem;
+  }
+
+  .disclaimer {
+    font-size: 10px;
+    padding: 6px;
   }
 }
