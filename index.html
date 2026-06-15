@@ -18,31 +18,38 @@
 
     <section class="home-section">
       <div class="home-content">
-        <!-- <nav>
+        <nav>
           <ul class="nav-list">
             <li class="home">
               <a href="#"><span class="nav-hash text-color-gradient">#</span>home</a>
             </li>
             <li class="works">
-              <a><span class="nav-hash text-color-gradient">#</span>works</a>
+              <a href="#projects"><span class="nav-hash text-color-gradient">#</span>works</a>
             </li>
             <li class="about-me">
-              <a><span class="nav-hash text-color-gradient">#</span>about-me</a>
+              <a href="#about"><span class="nav-hash text-color-gradient">#</span>about-me</a>
+            </li>
+            <li class="education">
+              <a href="#education"><span class="nav-hash text-color-gradient">#</span>education</a>
+            </li>
+            <li class="achievements">
+              <a href="#achievements"><span class="nav-hash text-color-gradient">#</span>achievements</a>
             </li>
             <li class="contacts">
-              <a><span class="nav-hash text-color-gradient">#</span>contacts</a>
+              <a href="#contact"><span class="nav-hash text-color-gradient">#</span>contacts</a>
             </li>
           </ul>
-        </nav> -->
+        </nav>
         <h1>
           Veera is a <span class="text-color-gradient">full Stack Developer</span><br> and
           <span class="text-color-gradient">Programmer</span>
         </h1>
         <p>He builds powerful web applications <br>where code meets creativity</p>
-        <button><a>Contact Me</a></button>
+        <button id="goToContact"><a>Contact Me</a></button>
+        <a href="https://drive.google.com/file/d/1U4OjTXIPRtWP8CHAxZtSH0mzJa6DVU-h/view?usp=drive_link"><button>Resume</button></a>
       </div>
       <div class="home-image">
-        <img src="assests/20250403_101556_704.png" alt="Veera" />
+        <img src="assests/20250403_092411_987.png" alt="Veera" />
       </div>
     </section>
 
@@ -55,7 +62,7 @@
       <div><p class="author">- Benjamin Franklin</p></div>
     </div>
 
-    <section class="projects-section">
+    <section class="projects-section" id="projects">
       <div class="projects-title">
         <p>
           <span class="text-color-gradient">#</span>projects <span class="text-color-gradient">────────────────────── </span>
@@ -64,7 +71,11 @@
       </div>
       <div class="projects-container">
         <div class="project-box">
-          <div class="project-thumb"><img src="assests/Project_thumbnails/image.png"></div>
+          <div class="project-thumb">
+            <a href="https://veeraarun.github.io/Vision-X/">
+              <img src="assests/Project_thumbnails/image.png" alt="VISION-X project thumbnail">
+            </a>
+          </div>
           <div class="project-title"><p><hr></p></div>
           <div class="project-description">
             <h3 class="text-color-gradient">VISION-X</h3><br>
@@ -76,7 +87,11 @@
         </div>
 
         <div class="project-box">
-          <div class="project-thumb"><img src="assests/Project_thumbnails/screenshot.png"></div>
+          <div class="project-thumb">
+            <a href="https://veeraarun.github.io/Shield-X/">
+              <img src="assests/Project_thumbnails/screenshot.png" alt="SHIELD-X project thumbnail">
+            </a>
+          </div>
           <div class="project-title"><p><hr></p></div>
           <div class="project-description">
             <h3 class="text-color-gradient">SHIELD-X</h3><br>
@@ -86,6 +101,23 @@
           </div>
         </div>
 
+        <div class="project-box">
+          <div class="project-thumb">
+            <a href="https://river-cloudy-63509765.figma.site">
+              <img src="assests/Project_thumbnails/Hirex thumbnail.png" alt="HIREX project thumbnail">
+            </a>
+          </div>
+          <div class="project-title"><p><hr></p></div>
+          <div class="project-description">
+            <h3 class="text-color-gradient">HIREX</h3><br>
+            <p>HIREX – Smart Placement Management System is an AI-based college project that streamlines placements with smart student–company matching, skill-gap analysis, and role-based modules, built as a full-stack web app.</p>
+            <button onclick="window.location.href='https://river-cloudy-63509765.figma.site'">Live</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="more-projects">
+        <a href="https://veeraarun.github.io/ProjectsHub/" target="_blank">See more projects</a>
       </div>
     </section>
 
@@ -94,54 +126,114 @@
         <p><span class="text-color-gradient">#</span>skills <span class="text-color-gradient">────────────────────── </span></p>
       </div>
       <div class="skills-container">
-        
         <div class="skills-content">
-          <div class="languages">
-            <p>
-            <span>Languages</span>
-            <hr>
-            <p style="white-space: pre;">Python      C++  
-Java        JavaScript</p>
-            </p>
+          <div class="skill-card">
+            <h3>Languages</h3>
+            <div class="skill-list">
+              <span>Python</span>
+              <span>C++</span>
+              <span>Java</span>
+              <span>JavaScript</span>
+            </div>
           </div>
-          <div class="tools">
-            <p>
-              <span>Tools</span>
-              <hr>
-              <p style="white-space: pre;">VSCode     Figma 
- Git      GitHub</p>
-            </p>
+          <div class="skill-card">
+            <h3>Tools</h3>
+            <div class="skill-list">
+              <span>VSCode</span>
+              <span>Figma</span>
+              <span>Git</span>
+              <span>GitHub</span>
+            </div>
           </div>
-          <div class="Web Technologies">
-            <p>
-              <span>Web Technologies</span>
-              <hr>
-              <p style="white-space: pre;">HTML       CSS
-(Learning React & Node.js)</p>
-
-            </p>
+          <div class="skill-card featured-skill">
+            <h3>Web Technologies</h3>
+            <div class="skill-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>React</span>
+              <span>Node.js</span>
+            </div>
+            <p>Currently strengthening full-stack development through practical projects.</p>
           </div>
-          <div class="databases">
-            <p>
-              <span>Databases</span>
-              <hr>
-              MySQL
-            </p>
+          <div class="skill-card">
+            <h3>Database</h3>
+            <div class="skill-list">
+              <span>MySQL</span>
+            </div>
           </div>
-          <div class="Others">
-            <p>
-              <span>Others</span>
-              <hr>
-              <p style="white-space: pre;">OOPS    Problem Solving </p>
-            </p>
+          <div class="skill-card">
+            <h3>Core Concepts</h3>
+            <div class="skill-list">
+              <span>OOPS</span>
+              <span>Problem Solving</span>
+            </div>
           </div>
         </div>
-        <div class="skill-graphics"><img src="assests/graphics/Group 36.png" alt="">
+        <div class="skill-graphics">
+          <img src="assests/graphics/Group 36.png" alt="">
         </div>
       </div>
     </section>
 
-    <section class="about-section">
+    <section class="education-section" id="education">
+      <div class="education-title">
+        <p><span class="text-color-gradient">#</span>education <span class="text-color-gradient">────────────────────── </span></p>
+      </div>
+      <div class="education-container">
+        <div class="education-card">
+          <p class="education-year">Expected Graduation: 2027</p>
+          <h3>B.Tech in Computer Science and Business Systems</h3>
+          <p>Nehru Institute of Engineering and Technology, Coimbatore</p>
+          <div class="coursework-list">
+            <span>Data Structures & Algorithms</span>
+            <span>DBMS</span>
+            <span>Object-Oriented Programming</span>
+            <span>DevOps</span>
+            <span>AI & ML</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="achievements-section" id="achievements">
+      <div class="achievements-title">
+        <p><span class="text-color-gradient">#</span>achievements <span class="text-color-gradient">────────────────────── </span></p>
+      </div>
+      <div class="achievements-container">
+        <div class="achievement-card">
+          <span>Finalist</span>
+          <h3>IncepTrix Hackathon</h3>
+          <p>Jain University, Bangalore - VR Therapy App, 2025</p>
+        </div>
+        <div class="achievement-card">
+          <span>Best Paper Award</span>
+          <h3>National Conference on Technical Innovation</h3>
+          <p>Karpagam University, 2025</p>
+        </div>
+        <div class="achievement-card">
+          <span>Winner</span>
+          <h3>Prompt Engineering</h3>
+          <p>JCT College of Engineering, 2025</p>
+        </div>
+        <div class="achievement-card">
+          <span>2nd Place</span>
+          <h3>Ideathon</h3>
+          <p>Akshaya College of Engineering, 2025</p>
+        </div>
+        <div class="achievement-card">
+          <span>Participant</span>
+          <h3>Smart India Hackathon</h3>
+          <p>Government of India - Software Edition, 2025</p>
+        </div>
+        <div class="achievement-card">
+          <span>Blockchain Project Collector DAO</span>
+          <h3>Andromeda aOS Global Hackathon</h3>
+          <p>2025</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
       <div class="about-title">
         <p><span class="text-color-gradient">#</span>about-me <span class="text-color-gradient">────────────────────── </span></p>
       </div>
@@ -152,22 +244,24 @@ Java        JavaScript</p>
           </p>
           <!-- <button>Read More...</button> -->
         </div>
-        <div class="about-image"><img src="assests/20250403_092411_987.png" alt=""></div>
+        <div class="about-image"><img src="assests/20250403_101556_704.png" alt="Veera"></div>
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="contact-title">
         <p><span class="text-color-gradient">#</span>contacts <span class="text-color-gradient">────────────────────── </span></p>
       </div>
       <div class="contact-container">
-        <div class="contact-content"><p>I'm interested in freelance or intern opportunities. However if you have any queries, collaboration ideas, or project requests, feel free to reach out - I'm just a message away!</p></div>
+        <div class="contact-content">
+          <p>I'm open to internship opportunities, freelance work, and project collaborations. If you have an idea, role, or question in mind, reach out and I'll get back to you.</p>
+        </div>
         <div class="contact-info">
-          <p>Message me here</p>
-          <br>
-          <a href="https://www.instagram.com/https_veera">https_veera</a>
-          <br>
-          <a href="veeraarun690@gmail.com">Mail me</a>
+          <p>Message me</p>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/veera-arun-v" target="_blank">LinkedIn</a>
+            <a href="mailto:veeraarun690@gmail.com">Mail</a>
+          </div>
         </div>
       </div>
     </section>
