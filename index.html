@@ -7,16 +7,31 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-
-    <!-- Disclaimer -->
-    <div class="disclaimer">
-        <p>
-            This site is under development. Please check back later for updates.
-        </p>
+    <div class="loader-screen" id="loaderScreen" aria-live="polite">
+      <div class="loader-content">
+        <div class="loader-label">Loading portfolio...</div>
+        <div class="code-window">
+          <div class="code-header">
+            <span class="window-tag">portfolio</span>
+            <span class="window-status">booting</span>
+          </div>
+          <pre class="code-block"><code>print("Hello, friend...")
+# Starting portfolio...
+# Loading experience...</code></pre>
+        </div>
+      </div>
     </div>
 
+    <div class="page-shell">
+      <!-- Disclaimer -->
+      <div class="disclaimer">
+          <p>
+              This site is under development. Please check back later for updates.
+          </p>
+      </div>
 
-    <section class="home-section">
+
+      <section class="home-section">
       <div class="home-content">
         <nav>
           <ul class="nav-list">
@@ -243,7 +258,7 @@
             <span class="text-color-gradient">Hi, I’m Veera — a self-driven full-stack developer</span> in the making, currently pursuing my undergraduate degree at NIET, Coimbatore. My journey started with curiosity in programming languages like C++, Python, and Java, which slowly evolved into a deeper passion for building real-world applications through web development. I'm not here just to learn frameworks or follow trends—I’m here to understand how systems work and how to create value through clean, efficient code. Alongside my academics, I’m committed to consistent self-learning, building mini projects, and following a system-based approach that helps me grow daily. I don’t claim to have figured it all out—but every day I show up, build, and try to get better. Whether it’s designing layouts, writing JavaScript logic, or collaborating with other learners, I’m focused on becoming job-ready and building a strong foundation that supports long-term growth
           </p>
           <!-- <button>Read More...</button> -->
-        </div>
+        </div>8
         <div class="about-image"><img src="assests/20250403_101556_704.png" alt="Veera"></div>
       </div>
     </section>
@@ -279,6 +294,7 @@
       
     </footer>
   
-    <script src="scripts.js"></script>
+      <script src="scripts.js"></script>
+    </div>
   </body>
 </html>
