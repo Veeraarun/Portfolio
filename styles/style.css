@@ -108,6 +108,8 @@ body:not(.loaded) {
   --primary-color: white;
   --secondary-color: #ABB2BF;
   --gradient-color: linear-gradient(to bottom, #17AA00, #0b5300);
+  --cursor-default: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Ccircle%20cx='16'%20cy='16'%20r='8'%20stroke='%2317AA00'%20stroke-width='2'%20fill='rgba(23,170,0,0.16)'/%3E%3Ccircle%20cx='16'%20cy='16'%20r='3'%20fill='%23d7ffd9'/%3E%3C/svg%3E") 16 16, auto;
+  --cursor-hover: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Ccircle%20cx='16'%20cy='16'%20r='10'%20stroke='%23FFFFFF'%20stroke-width='2'%20fill='rgba(23,170,0,0.24)'/%3E%3Cpath%20d='M12%2C16%20H20%20M16%2C12%20V20'%20stroke='%23FFFFFF'%20stroke-width='2'/%3E%3C/svg%3E") 16 16, pointer;
   
   /* Font Variables */
   --font-family: "Fira Code", sans-serif;
@@ -136,6 +138,20 @@ body {
   overflow-x: hidden;
   background: #000000;
   isolation: isolate;
+  cursor: var(--cursor-default);
+}
+
+body:hover {
+  cursor: var(--cursor-default);
+}
+
+button,
+a,
+.nav-list li,
+.contact-links a,
+.project-description button,
+.more-projects a {
+  cursor: var(--cursor-hover);
 }
 
 body::before,
@@ -221,55 +237,61 @@ hr{
 }
 
 .home-section{
-  margin-top: 5rem;
+  margin-top: 7rem;
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(240px, .8fr);
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
 }
 
-.home-content{
-
-  h1{
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
-    margin: clamp(4rem, 9vw, 10rem) 0 clamp(2rem, 5vw, 5rem) 0;
-  }
-
-  p{
-    font-size: 1rem;
-  }
-
-  button{
-    font-size: 1rem;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    border-radius: 2rem;
-    padding: 10px 20px;
-    border: solid 2px #17AA00;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    transition: all .5s;
-  }
-  button:hover{
-    border: solid 2px #ffffff;
-    background-color: #0b5300;
-  }
+.home-content {
+  max-width: 48rem;
 }
 
+.home-content h1{
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: clamp(4rem, 9vw, 10rem) 0 clamp(2.2rem, 5vw, 5rem) 0;
+  line-height: 1.05;
+}
+
+.home-content p{
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 42rem;
+  color: #d7d7d7;
+}
+
+.home-content button{
+  font-size: 1.05rem;
+  margin-top: 1.2rem;
+  margin-right: 1rem;
+  border-radius: 2rem;
+  padding: 12px 24px;
+  border: solid 2px #17AA00;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.home-content button:hover{
+  border: solid 2px #ffffff;
+  background-color: #0b5300;
+}
 
 .home-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  img{
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    filter: drop-shadow(0 0 18px rgba(23, 170, 0, 0.28));
-  }
+}
+
+.home-image img{
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(23, 170, 0, 0.28));
 }
 
 .quotes-container{
